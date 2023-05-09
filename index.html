@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Жизнь</title>
+    <link href="./styles/reset.css" rel="stylesheet"/>
+    <link href="./styles/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<section class="controls">
+    <label>
+        Размер поля, клеток
+        <input
+                id="cell_count"
+                type="number"
+                min="10"
+                max="1000"
+                value="10"
+                onchange="init()"
+        >
+    </label>
+    <button id="btn_start" onclick="game_start()">Начать</button>
+    <button id="btn_stop" onclick="game_stop()">Остановить</button>
+</section>
+<p id="message">
+    <span id="message_live">Поколение №</span><span id="message_dead">Жизнь окончилась на поколении №</span><span id="generation_index"></span>
+</p>
+
+<canvas id="root"></canvas>
+
+<script type="text/javascript" src="./scripts/script.js"></script>
+</body>
+</html>
